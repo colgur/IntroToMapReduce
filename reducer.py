@@ -3,8 +3,9 @@
 import sys
 
 def output(previous_key, total):
-   if (previous_key != None):
-      print previous_key+" occurred "+str(total)+" times"
+   if previous_key is not None:
+      if total > 1000:
+         print str(total)+"\t"+previous_key
 
 previous_key = None
 total = 0
